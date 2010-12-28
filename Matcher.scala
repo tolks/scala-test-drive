@@ -52,8 +52,8 @@ object Matcher {
   }
 
   def main(args: Array[String]) {
-    val dict = new WordsDictionary("C:\\Users\\anatoli\\src\\scala.test\\resources\\dictionary.txt")
-    val srcFile = Source.fromFile("C:\\Users\\anatoli\\src\\scala.test\\resources\\input.txt")
+    val dict = new WordsDictionary("path/to/dictionary.txt")
+    val srcFile = Source.fromFile("path/to/input.txt")
     for(val line <- srcFile.getLines) { // gives you an iterator
       val digits: List[Int] = createDigitList(line)
       val found = new Matcher(dict).findWords(digits, List())
